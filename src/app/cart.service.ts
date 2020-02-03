@@ -20,6 +20,10 @@ export class CartService {
     return this.items;
   }
 
+  getShippingPrice() {
+    return this.http.get('assets/shipping.json');
+  }
+
   constructor(private http: HttpClient) { }
 
 }
